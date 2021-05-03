@@ -21,7 +21,6 @@ class Nouns extends Component{
     {
         return(
             <View style={styles.Container}>
-                <View style={styles.Heading}><Text>Nouns</Text></View>
                 
                 <View style={styles.ListView}>
                     <FlatList

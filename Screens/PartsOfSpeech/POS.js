@@ -22,7 +22,8 @@ class POS extends Component{
     {
         return(
             <View style={styles.Container}>
-                <View style={styles.Heading}><Text>Parts of Speech</Text></View>
+                
+                
                 
                 <View style={styles.ListView}>
                     <FlatList

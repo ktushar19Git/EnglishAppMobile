@@ -105,13 +105,13 @@ const HomeStackScreen = ({navigation}) => (
         headerStyle:{
             backgroundColor:'#009387'
         },
-        headerTintColor:'red',
+        headerTintColor:'black',
         headerTitleStyle:{
             fontWeight:'bold'
         }
     }}>
         <HomeStack.Screen name="POS" component={POS} options={{
-            title:'Overview',
+            title:'Parts of Speech',
             headerLeft: () => (
                 <Icon.Button name="ios-menu" size={25} backgroundColor='#009387' />
             )
@@ -125,13 +125,13 @@ const DetailsStackScreen = ({navigation}) =>(
         headerStyle:{
             backgroundColor:'#009387'
         },
-        headerTintColor:'blue',
+        headerTintColor:'black',
         headerTitleStyle:{
             fontWeight:'bold'
         }
     }}>
         <DetailsStack.Screen name="Vocabulary" component={Vocabulary} options={{
-            title:'Details',
+            title:'Vocabulary',
             headerLeft:()=>(
                 <Icon.Button name="ios-notifications" size={25} backgroundColor='#009387' />
             )

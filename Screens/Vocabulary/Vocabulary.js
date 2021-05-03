@@ -22,7 +22,6 @@ class Vocabulary extends Component{
     {
         return(
             <View style={styles.Container}>
-                <View style={styles.Heading}><Text>Vocabulary</Text></View>
                 
                 <View style={styles.ListView}>
                     <FlatList
