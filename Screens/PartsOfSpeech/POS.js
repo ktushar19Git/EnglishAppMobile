@@ -6,7 +6,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import NounsPage from './Nouns/Nouns'
 
 
-class Vocabulary extends Component{
+class POS extends Component{
 
     constructor(props) {
         super(props)
@@ -22,7 +22,7 @@ class Vocabulary extends Component{
     {
         return(
             <View style={styles.Container}>
-                <View style={styles.Heading}>Parts of Speech</View>
+                <View style={styles.Heading}><Text>Parts of Speech</Text></View>
                 
                 <View style={styles.ListView}>
                     <FlatList
@@ -56,48 +56,48 @@ class Vocabulary extends Component{
         )
     }
 }
-export default Vocabulary
+export default POS
 const styles = StyleSheet.create({
     Container:{
-        padding:'10px',
-        margin:'10px',
+        padding:10,
+        margin:10,
         backgroundColor:'#088e95',
     },
     Heading:{
         color:'white',
-        fontSize:'14px',
+        fontSize:14,
         fontWeight:'bold',
         justifyContent: 'center',
         alignSelf:'center',
-        padding:'10px',
+        padding:10,
         backgroundColor:'orangered',
         width:'100%',
-        paddingLeft:'500px',
+        paddingLeft:500,
     },
     ListView: {
-        margin:'5px',
+        margin:5,
         
       },
     item: {
         height: 75,
-        margin:'5px',
+        margin:5,
         backgroundColor:'azure',
-        borderRadius:'5px',
+        borderRadius:5,
       },
     itemHeader: {
-        paddingTop: '10px',
+        paddingTop: 10,
         fontSize: 14,
         color:'black',
-        marginLeft:'10px',
+        marginLeft:10,
         fontWeight:'bold',
       },
       itemDetails: {
         
         fontSize: 14,
         color:'green',
-        margin:'5px',
-        paddingBottom: '10px',
-        marginLeft:'10px',
+        margin:5,
+        paddingBottom: 10,
+        marginLeft:10,
         fontWeight:'bold',
       },
 })

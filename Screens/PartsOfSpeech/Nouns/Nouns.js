@@ -21,7 +21,7 @@ class Nouns extends Component{
     {
         return(
             <View style={styles.Container}>
-                <View style={styles.Heading}>Nouns</View>
+                <View style={styles.Heading}><Text>Nouns</Text></View>
                 
                 <View style={styles.ListView}>
                     <FlatList
@@ -58,45 +58,45 @@ class Nouns extends Component{
 export default Nouns
 const styles = StyleSheet.create({
     Container:{
-        padding:'10px',
-        margin:'10px',
+        padding:10,
+        margin:10,
         backgroundColor:'#088e95',
     },
     Heading:{
         color:'white',
-        fontSize:'14px',
+        fontSize:14,
         fontWeight:'bold',
         justifyContent: 'center',
         alignSelf:'center',
-        padding:'10px',
+        padding:10,
         backgroundColor:'orangered',
         width:'100%',
-        paddingLeft:'500px',
+        paddingLeft:500,
     },
     ListView: {
-        margin:'5px',
+        margin:5,
         backgroundColor:'white',
       },
     item: {
         height: 75,
-        margin:'5px',
+        margin:5,
         backgroundColor:'black',
-        borderRadius:'5px',
+        borderRadius:5,
       },
     itemHeader: {
-        paddingTop: '10px',
+        paddingTop: 10,
         fontSize: 14,
         color:'white',
-        marginLeft:'10px',
+        marginLeft:10,
         fontWeight:'bold',
       },
       itemDetails: {
         
         fontSize: 14,
         color:'green',
-        margin:'5px',
-        paddingBottom: '10px',
-        marginLeft:'10px',
+        margin:5,
+        paddingBottom: 10,
+        marginLeft:10,
         fontWeight:'bold',
       },
 })
