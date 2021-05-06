@@ -74,80 +74,85 @@ class Adjectives extends Component{
 }
 export default Adjectives
 const styles = StyleSheet.create({
-    Container:{
-        padding:10,
-        margin:10,
-        backgroundColor:'#088e95',
+  Container:{
+      padding:10,
+      margin:10,
+      backgroundColor:'#088e95',
+  },
+  Heading:{
+      color:'white',
+      fontSize:14,
+      fontWeight:'bold',
+      justifyContent: 'center',
+      alignSelf:'center',
+      padding:10,
+      backgroundColor:'orangered',
+      width:'100%',
+      paddingLeft:500,
+  },
+  ListView: {
+      margin:5,
+      
     },
-    Heading:{
-        color:'white',
-        fontSize:14,
-        fontWeight:'bold',
-        justifyContent: 'center',
-        alignSelf:'center',
-        padding:10,
-        backgroundColor:'orangered',
-        width:'100%',
-        paddingLeft:500,
+  item: {
+      height: 75,
+      marginBottom:5,
+      backgroundColor:'azure',
+      borderRadius:5,
     },
-    ListView: {
-        margin:5,
-        
-      },
-    item: {
-        height: 75,
-        margin:5,
-        backgroundColor:'azure',
-        borderRadius:5,
-      },
-    itemHeader: {
-        paddingTop: 10,
-        fontSize: 14,
-        color:'black',
-        marginLeft:10,
-        fontWeight:'bold',
-      },
-      itemDetails: {
-        
-        fontSize: 14,
-        color:'green',
-        margin:5,
-        paddingBottom: 10,
-        marginLeft:10,
-        fontWeight:'bold',
-      },
-      itemRow: {
-        flex:1,
-        flexDirection:'row'
-      },
-      itemAvatarColumn: {
-        flex:1,
-        flexDirection:'row',
-        textAlign:'center',
-        alignContent:'center',
-        color:'purple',
-        alignSelf:'center'
-        
-      },
-      itemLabelColumn: {
-        flex:12,
-        flexDirection:'column'
-      },
-      itemNextColumn: {
-        flex:1,
-        flexDirection:'row',
-        textAlign:'right',
-        color:'black',
-        alignSelf:'center'
-      },
-      itemAvatarIcon: {
-        color:'purple',
-        marginLeft:20
-        
-      },
-      itemColumn: {
-     
-        flexDirection:'column'
-      },
+  itemHeader: {
+      paddingTop: 10,
+      fontSize: 14,
+      color:'black',
+      marginLeft:10,
+      fontWeight:'bold',
+    },
+    itemDetails: {
+      
+      fontSize: 14,
+      color:'green',
+      margin:5,
+      paddingBottom: 10,
+      marginLeft:10,
+      fontWeight:'bold',
+    },
+    itemRow: {
+      flex:1,
+      flexDirection:'row'
+    },
+    itemAvatarColumn: {
+      flex:1,
+      flexDirection:'row',
+      color:'black',
+      height:75,
+      alignSelf:'flex-start',
+      marginTop:15,
+      marginRight:10,
+      
+    },
+    itemLabelColumn: {
+      flex:6,
+      flexDirection:'column',
+      marginTop:2,
+      marginLeft:10,
+      height:75
+    },
+    itemNextColumn: {
+      flex:1,
+      flexDirection:'row',
+      color:'black',
+      height:75,
+      marginTop:15
+
+    },
+    itemAvatarIcon: {
+      color:'purple',
+      marginLeft:20
+      
+    },
+    itemColumn: {
+   
+      flexDirection:'column'
+    },
 
 })

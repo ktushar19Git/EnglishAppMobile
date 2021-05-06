@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
       },
     item: {
         height: 75,
-        margin:5,
+        marginBottom:5,
         backgroundColor:'azure',
         borderRadius:5,
       },
@@ -123,22 +123,27 @@ const styles = StyleSheet.create({
       itemAvatarColumn: {
         flex:1,
         flexDirection:'row',
-        textAlign:'center',
-        alignContent:'center',
-        color:'purple',
-        alignSelf:'center'
+        color:'black',
+        height:75,
+        alignSelf:'flex-start',
+        marginTop:15,
+        marginRight:10,
         
       },
       itemLabelColumn: {
-        flex:12,
-        flexDirection:'column'
+        flex:6,
+        flexDirection:'column',
+        marginTop:2,
+        marginLeft:10,
+        height:75
       },
       itemNextColumn: {
         flex:1,
         flexDirection:'row',
-        textAlign:'right',
         color:'black',
-        alignSelf:'center'
+        height:75,
+        marginTop:15
+
       },
       itemAvatarIcon: {
         color:'purple',
