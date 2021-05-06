@@ -4,6 +4,8 @@ import { StyleSheet, Text, View,FlatList,TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import NounsPage from './Nouns/Nouns'
+import { Avatar } from 'react-native-paper';
+
 
 
 class POS extends Component{
@@ -28,9 +30,9 @@ class POS extends Component{
                 <View style={styles.ListView}>
                     <FlatList
                         data={[
-                            { key: 'Noun', Desc:'Nouns are naming words' },
-                            { key: 'Pronoun', Desc:'Pronouns are used to name nouns' },
-                            { key: 'Adjective', Desc:'Adjectives descibe nouns/pronouns' },
+                            { key: 'Noun', Desc:'Nouns are naming words',Link:'Nouns' },
+                            { key: 'Pronoun', Desc:'Pronouns are used to name nouns',Link:'Pronouns' },
+                            { key: 'Adjective', Desc:'Adjectives descibe nouns/pronouns',Link:'Adjectives' },
                             { key: 'Verb', Desc:'Verb is used for actions/state' },
                             { key: 'Adverb', Desc:'Adverbs descibe actions' },
                             { key: 'Conjuction', Desc:'Conjuctions are used to connect sentences or words' },
@@ -38,15 +40,28 @@ class POS extends Component{
                             { key: 'Interjection', Desc:'Interjections express emotions' },
                         ]}
                         renderItem={({ item }) => 
-                        <View style={styles.item} onPress={() => { this.handleRedirect() }}>
-                            <TouchableOpacity onPress={()=>navigation.navigate('Nouns')}>
-                            <Text style={styles.itemHeader}>{item.key}</Text>
-                            <Text style={styles.itemDetails}>{item.Desc}</Text>
-                            <MaterialIcons
-                                name="navigate-next"
-                                color="#fff"
-                                size={40} />
-                                </TouchableOpacity>
+                        <View style={styles.item} >
+                            <TouchableOpacity onPress={()=>this.props.navigation.navigate(item.Link)}>
+                                <View style={styles.itemRow}>
+                                    <View style={styles.itemAvatarColumn}>
+                                        <Avatar.Image style={styles.itemAvatarIcon} size={40} source={require('../../assets/Logo.png')} />
+                                        
+                                    </View>
+                                    <View style={styles.itemLabelColumn}>
+                                        <Text style={styles.itemHeader}>{item.key}</Text>
+                                        <Text style={styles.itemDetails}>{item.Desc}</Text>
+                                    </View>        
+                                    <View style={styles.itemNextColumn}>
+                                        <MaterialIcons
+                                        name="navigate-next"
+                                        color="black"
+                                        size={40} />        
+                                    </View>
+
+                                </View>
+                                
+                                
+                            </TouchableOpacity>
                         </View>
                         
                         
@@ -101,4 +116,38 @@ const styles = StyleSheet.create({
         marginLeft:10,
         fontWeight:'bold',
       },
+      itemRow: {
+        flex:1,
+        flexDirection:'row'
+      },
+      itemAvatarColumn: {
+        flex:1,
+        flexDirection:'row',
+        textAlign:'center',
+        alignContent:'center',
+        color:'purple',
+        alignSelf:'center'
+        
+      },
+      itemLabelColumn: {
+        flex:12,
+        flexDirection:'column'
+      },
+      itemNextColumn: {
+        flex:1,
+        flexDirection:'row',
+        textAlign:'right',
+        color:'black',
+        alignSelf:'center'
+      },
+      itemAvatarIcon: {
+        color:'purple',
+        marginLeft:20
+        
+      },
+      itemColumn: {
+     
+        flexDirection:'column'
+      },
+
 })

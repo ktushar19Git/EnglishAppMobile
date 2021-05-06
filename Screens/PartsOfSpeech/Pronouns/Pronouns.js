@@ -8,7 +8,7 @@ import { Avatar } from 'react-native-paper';
 
 
 
-class Nouns extends Component{
+class Pronouns extends Component{
 
     constructor(props) {
         super(props)
@@ -30,8 +30,8 @@ class Nouns extends Component{
                 <View style={styles.ListView}>
                     <FlatList
                         data={[
-                            { key: 'Common Nouns', Desc:'Nouns are naming words' },
-                            { key: 'Proper Nouns', Desc:'Pronouns are used to name nouns' },
+                            { key: 'Subjective Pronoun', Desc:'Nouns are naming words' },
+                            { key: 'Objective Pronoun', Desc:'Pronouns are used to name nouns' },
                             { key: 'Abstract Nouns', Desc:'Adjectives descibe nouns/pronouns' },
                             { key: 'Countable Nouns', Desc:'Verb is used for actions/state' },
                             { key: 'UnCOuntable Nouns', Desc:'Adverbs descibe actions' },
@@ -72,7 +72,7 @@ class Nouns extends Component{
         )
     }
 }
-export default Nouns
+export default Pronouns
 const styles = StyleSheet.create({
     Container:{
         padding:10,

@@ -7,6 +7,9 @@ import SigninScreen from './SigninScreen';
 import Drawerscreen from './Drawerscreen';
 import POS from '../PartsOfSpeech/POS'
 import MainTabScreen from '../Maintabscreen'
+import Nouns from '../PartsOfSpeech/Nouns/Nouns';
+import Pronouns from '../PartsOfSpeech/Pronouns/Pronouns';
+import Adjectives from '../PartsOfSpeech/Adjectives/Adjectives';
 
 
 
@@ -21,6 +24,9 @@ const RootStackScreen=({ navigation}) =>(
      <RootStack.Screen name="SignupScreen"  component={SignupScreen}  />
     <RootStack.Screen name="Drawerscreen"   component={Drawerscreen}  />
     <RootStack.Screen name="POS"  component={POS} />
+    <RootStack.Screen name="Nouns"  component={Nouns} />
+    <RootStack.Screen name="Pronouns"  component={Pronouns} />
+    <RootStack.Screen name="Adjectives"  component={Adjectives} />
     </RootStack.Navigator>
     </NavigationContainer>
 );
