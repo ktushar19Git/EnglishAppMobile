@@ -28,7 +28,7 @@ class POS extends Component{
                 
                 
                 <View style={styles.ListView}>
-                    <FlatList
+                    <FlatList 
                         data={[
                             { key: 'Noun', Desc:'Nouns are naming words',Link:'Nouns' },
                             { key: 'Pronoun', Desc:'Pronouns are used to name nouns',Link:'Pronouns' },

@@ -42,7 +42,7 @@ const Maintabscreen = () => (
        tabBarColor:"#fff",
        backgroundColor:'black',
        tabBarIcon:() =>(
-           <Icon name="ios-home"  size={26} />
+           <Icon name="ios-home"  size={26}  />
        ),
        
        

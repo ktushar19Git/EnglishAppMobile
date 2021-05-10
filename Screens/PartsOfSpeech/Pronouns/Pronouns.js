@@ -23,9 +23,23 @@ class Pronouns extends Component{
     render()
     {
         return(
-            <View style={styles.Container}>
+            <View style={styles.ContainerMain}>
                 
-                
+                <View style={styles.ContainerTitle}>
+                  <View style={styles.ContainerTitleBackButton}>
+                    <TouchableOpacity onPress={()=>this.props.navigation.goBack(null)}>
+                      <MaterialIcons
+                                            name="navigate-before"
+                                            color="black"
+                                            size={40} />
+                    </TouchableOpacity>
+                                                    
+                  </View>
+                  <View style={styles.ContainerTitleHeading}>
+                      <Text style={styles.TitleHeading}>Pronouns</Text>
+                  </View>
+                  
+                </View>
                 
                 <View style={styles.ListView}>
                     <FlatList
@@ -74,6 +88,30 @@ class Pronouns extends Component{
 }
 export default Pronouns
 const styles = StyleSheet.create({
+  ContainerMain:{
+    backgroundColor:'azure',
+  },
+  ContainerTitle:{
+      padding:10,
+      marginTop:25,
+      backgroundColor:'#088e95',
+      flexDirection:'row'
+  },
+  ContainerTitleBackButton:{
+      flexDirection:'column',
+      flex:0,
+  },
+  ContainerTitleHeading:{
+    flexDirection:'column',
+    flex:2,
+  },
+  TitleHeading:{
+    color:'black',
+    fontWeight:'bold',
+    fontSize:20,
+    alignSelf:'flex-start',
+    marginTop:8,
+  },
   Container:{
       padding:10,
       margin:10,
