@@ -15,6 +15,7 @@ import ContactsScreen from '../Screens/Drawer/ContactsScreen';
 import Submitdata from '../Screens/RootStack/Submitdata';
 import POS from '../Screens/PartsOfSpeech/POS'
 import Vocabulary from '../Screens/Vocabulary/Vocabulary';
+import Grammar from './Grammar/Grammar';
 
 
 const HomeStack = createStackNavigator();
@@ -110,8 +111,8 @@ const HomeStackScreen = ({navigation}) => (
             fontWeight:'bold'
         }
     }}>
-        <HomeStack.Screen name="POS" component={POS} options={{
-            title:'Parts of Speech',
+        <HomeStack.Screen name="Grammar" component={Grammar} options={{
+            title:'Grammar',
             headerLeft: () => (
                 <Icon.Button name="ios-menu" size={25} backgroundColor='#009387' />
             )
