@@ -10,6 +10,7 @@ import MainTabScreen from '../Maintabscreen'
 import Nouns from '../PartsOfSpeech/Nouns/Nouns';
 import Pronouns from '../PartsOfSpeech/Pronouns/Pronouns';
 import Adjectives from '../PartsOfSpeech/Adjectives/Adjectives';
+import QuestionScreen from '../Questions/QuestionScreen';
 
 
 
@@ -27,6 +28,7 @@ const RootStackScreen=({ navigation}) =>(
     <RootStack.Screen name="Nouns"  component={Nouns} />
     <RootStack.Screen name="Pronouns"  component={Pronouns} />
     <RootStack.Screen name="Adjectives"  component={Adjectives} />
+    <RootStack.Screen name="QuestionScreen"component={QuestionScreen}/>
     </RootStack.Navigator>
     </NavigationContainer>
 );

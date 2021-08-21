@@ -7,6 +7,7 @@ import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
 import AboutScreen from './AboutScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {MaterialIcons} from '@expo/vector-icons';
 import { createStackNavigator} from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -16,17 +17,22 @@ import Submitdata from '../Screens/RootStack/Submitdata';
 import POS from '../Screens/PartsOfSpeech/POS'
 import Vocabulary from '../Screens/Vocabulary/Vocabulary';
 import Grammar from './Grammar/Grammar';
+import VideoScreen  from '../Videos/VideoScreen';
+import QuestionScreen from '../Screens/Questions/QuestionScreen';
+import SubjectScreen from '../Screens/Questions/SubjectScreen';
 
 
 const HomeStack = createStackNavigator();
 const DetailsStack=createStackNavigator();
 const AboutStack=createStackNavigator();
 const ContactStack=createStackNavigator();
+const VideoStack=createStackNavigator();
+const QuestionStack=createStackNavigator();
 const Tab=createMaterialBottomTabNavigator();
 const Drawer=createDrawerNavigator();
 
 const Maintabscreen = () => (
-    <Tab.Navigator
+    <Tab.Navigator 
     initialRouteName="Grammer"
     tabBarOptions={{
         style:{
@@ -93,7 +99,31 @@ const Maintabscreen = () => (
    }}
    />
 
+<Tab.Screen
+   name="Video"
+   component={VideoStackScreen}
+   options={{
+       tabBarLabel:'Video',
+       tabBarColor:"#fff",
+       tabBarIcon:() =>(
+           <MaterialIcons name="video-library"  size={26} />
+       ),
+       
 
+   }}
+   />
+
+<Tab.Screen
+   name="Subject"
+   component={QuestionStackScreen}
+   options={{
+       tabBarLabel:'Subject',
+       tabBarColor:"#fff",
+       tabBarIcon:() =>(
+           <MaterialIcons name="question-answer"  size={26} />
+       ),
+   }}
+   />
 
     </Tab.Navigator>
 );
@@ -181,3 +211,44 @@ const ContactStackScreen = ({navigation}) =>(
         }} />
     </ContactStack.Navigator>
 );
+
+const VideoStackScreen = ({navigation}) =>(
+    <VideoStack.Navigator screenOptions={{
+        headerStyle:{
+            backgroundColor:'#009387'
+        },
+        headerTintColor:'#fff',
+        headerTitleStyle:{
+            fontWeight:'bold'
+        }
+    }}>
+        <VideoStack.Screen name="Contact" component={VideoScreen} options={{
+            title:'Video',
+            headerLeft:()=>(
+                <Icon.Button name="ios-menu" size={25} backgroundColor='#009387' />
+            )
+           
+        }} />
+    </VideoStack.Navigator>
+);
+
+const QuestionStackScreen = ({navigation}) =>(
+    <QuestionStack.Navigator screenOptions={{
+        headerStyle:{
+            backgroundColor:'#009387'
+        },
+        headerTintColor:'#fff',
+        headerTitleStyle:{
+            fontWeight:'bold'
+        }
+    }}>
+        <QuestionStack.Screen name="Subject" component={SubjectScreen} options={{
+            title:'Subject',
+            headerLeft:()=>(
+                <Icon.Button name="ios-menu" size={25} backgroundColor='#009387' />
+            )
+           
+        }} />
+    </QuestionStack.Navigator>
+);
+
